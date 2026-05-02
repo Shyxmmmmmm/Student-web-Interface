@@ -48,7 +48,7 @@ const Viewstudent = () => {
             <div className="border border-blue-200 shadow-sm rounded-2xl w-[95%] lg:w-[70%] p-5">
 
                 {/* Header */}
-                <div className="flex justify-between items-center py-2">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 py-2">
                     <h1 className="text-[#121B63] font-bold text-xl">All Students</h1>
 
                     <input
@@ -61,8 +61,8 @@ const Viewstudent = () => {
                 </div>
 
                 {/* Table */}
-                <div className="border rounded border-gray-300 p-2">
-                    <table className="w-full border border-gray-300">
+                <div className="border rounded border-gray-300 p-2 overflow-x-auto">
+                    <table className="min-w-[600px] w-full border border-gray-300">
                         <thead className="bg-gray-200">
                             <tr>
                                 <th className="p-2">ID</th>
@@ -98,8 +98,8 @@ const Viewstudent = () => {
                                         <td className="p-2 font-semibold">
                                             <span
                                                 className={`inline-block px-3 py-1 rounded text-sm font-semibold ${items.status === "Completed"
-                                                        ? "text-green-700 bg-green-100"
-                                                        : "text-[#F2A23F] bg-orange-100"
+                                                    ? "text-green-700 bg-green-100"
+                                                    : "text-[#F2A23F] bg-orange-100"
                                                     }`}
                                             >
                                                 {items.status}
