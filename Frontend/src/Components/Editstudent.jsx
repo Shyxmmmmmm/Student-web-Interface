@@ -27,7 +27,7 @@ const Editstudent = () => {
             })
             setloading(true)
             setTimeout(() => {
-                await alert("Record Updated")
+                alert("Record Updated")
                 navigate("/frontpage")
             }, 2000);
 
