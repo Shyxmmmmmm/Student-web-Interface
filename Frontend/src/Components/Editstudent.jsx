@@ -27,12 +27,11 @@ const Editstudent = () => {
             })
             setloading(true)
             setTimeout(() => {
-
+                await alert("Record Updated")
                 navigate("/frontpage")
-
             }, 2000);
 
-            await alert("Record Updated")
+            
 
 
         } catch (err) {

@@ -34,7 +34,6 @@ const Addstudent = () => {
             )
 
             if (res.data.success === true) {
-                alert("Student Added ✅")
                 navigate("/frontpage")
             } else {
                 alert("Failed to add student")
