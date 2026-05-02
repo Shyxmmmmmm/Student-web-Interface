@@ -11,32 +11,48 @@ const Addstudent = () => {
 
 
     const submit = async () => {
-        setloading(true)
+        try {
+            setloading(true)
 
-        if (!ip1 || !ip2 || !ip3 || !ip4) {
-            setloading(false)
-            alert('Fill all the inputs')
-            return
-        }
-        const res = await axios.post("https://student-web-interface-2.onrender.com/details", {
-            name: ip1,
-            age: ip2,
-            course: ip3,
-            status: ip4
-        })
-
-        if (res.data.success === true) {
-            setTimeout(() => {
-                setip1('')
-                setip2('')
-                setip3('')
-                setip4('')
+            if (!ip1 || !ip2 || !ip3 || !ip4) {
+                alert('Fill all the inputs')
                 setloading(false)
+                return
+            }
+
+            const res = await axios.post(
+                "https://student-web-interface-2.onrender.com/details",
+                {
+                    name: ip1,
+                    age: ip2,
+                    course: ip3,
+                    status: ip4
+                },
+                {
+                    timeout: 10000
+                }
+            )
+
+            if (res.data.success === true) {
+                alert("Student Added ✅")
                 navigate("/frontpage")
-            }, 2000)
-        } else {
+            } else {
+                alert("Failed to add student")
+            }
+
+        } catch (err) {
+            console.log(err)
+
+            if (err.response) {
+                alert("Server error: " + err.response.status)
+            } else if (err.request) {
+                alert("No response (backend sleeping or DB issue)")
+            } else {
+                alert("Error: " + err.message)
+            }
+
+        } finally {
             setloading(false)
-            alert("Details already Exists")
         }
     }
 
