@@ -29,7 +29,7 @@ const funsignup = async () => {
         setLoading(true)
 
         const res = await axios.post(
-            'http://localhost:3000/signup', 
+            'https://student-web-interface-2.onrender.com/signup', 
             {
                 username: ip1,
                 password: ip2
@@ -39,7 +39,6 @@ const funsignup = async () => {
             }
         )
 
-        console.log("RESPONSE:", res)
 
         if (res.data === true) {
             alert("Signup success")

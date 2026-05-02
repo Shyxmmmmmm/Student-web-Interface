@@ -19,7 +19,7 @@ const Editstudent = () => {
 
         try {
 
-            await axios.put(`http://localhost:3000/update/${data._id}`, {
+            await axios.put(`https://student-web-interface-2.onrender.com/update/${data._id}`, {
                 name,
                 age,
                 course,

@@ -18,7 +18,7 @@ const Addstudent = () => {
             alert('Fill all the inputs')
             return
         }
-        const res = await axios.post("http://localhost:3000/details", {
+        const res = await axios.post("https://student-web-interface-2.onrender.com/details", {
             name: ip1,
             age: ip2,
             course: ip3,

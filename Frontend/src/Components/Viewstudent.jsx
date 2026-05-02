@@ -9,12 +9,9 @@ const Viewstudent = () => {
     const [search, setSearch] = useState("")
     const [loading, setLoading] = useState(false)
 
-    
-
-
     useEffect(() => {
         setLoading(true)
-        axios.get("http://localhost:3000/getdata")
+        axios.get("https://student-web-interface-2.onrender.com/getdata")
             .then((res) => {
                 setlist(res.data)
             })
@@ -28,7 +25,7 @@ const Viewstudent = () => {
         if (!window.confirm("Are you sure you want to delete?")) return
 
         try {
-            await axios.delete(`http://localhost:3000/delete/${id}`)
+            await axios.delete(`https://student-web-interface-2.onrender.com/delete/${id}`)
             setlist(list.filter((item) => item._id !== id))
         } catch (err) {
             console.log(err)

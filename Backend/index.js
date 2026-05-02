@@ -17,7 +17,7 @@ app.post('/signup', (req, res) => {
     if (exists) {
         return res.json(false)
     }
-    
+
     users.push({ username, password })
     return res.json(true)
 })
@@ -69,10 +69,10 @@ app.post("/details", async (req, res) => {
     }
 })
 
-app.get('/getdata',(req,res)=>{
+app.get('/getdata', (req, res) => {
 
     student.find().then(
-        (data)=>{
+        (data) => {
             res.send(data)
         }
     )
@@ -106,11 +106,18 @@ app.put("/update/:id", async (req, res) => {
 })
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/swi").then(
-    () => { console.log("Db connected") }).catch(
-        () => { console.log("Db not Connected") })
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => {
+        console.log("✅ DB connected")
+    })
+    .catch((err) => {
+        console.log("❌ DB error:", err.message)
+    })
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT,() => {
+app.listen(PORT, () => {
     console.log("Server Started...")
 })

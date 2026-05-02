@@ -16,7 +16,7 @@ const Login = () => {
             setLoading(true)
 
             const res = await axios.post(
-                'http://localhost:3000/login',
+                'https://student-web-interface-2.onrender.com/login',
                 {
                     username: ip1,
                     password: ip2
