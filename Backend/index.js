@@ -110,7 +110,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/swi").then(
     () => { console.log("Db connected") }).catch(
         () => { console.log("Db not Connected") })
 
-
-app.listen(3000,() => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,() => {
     console.log("Server Started...")
 })
