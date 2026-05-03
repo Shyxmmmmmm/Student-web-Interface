@@ -68,7 +68,7 @@ return (
 
       {/* Header */}
       <div className="bg-blue-900 text-white text-center py-4 text-xl font-semibold">
-        Student Management System
+        Library Management System
       </div>
 
       {/* Content */}

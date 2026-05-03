@@ -16,7 +16,7 @@ const Frontpage = () => {
             <div className="border border-blue-200 shadow-sm rounded-2xl lg:w-[40%] w-[90%]">
                 <div className="bg-[#02173E] rounded-t-2xl p-3 flex justify-center items-center gap-3">
                     <img src={img1} alt="img" className="w-8 h-8" />
-                    <h1 className="text-white font-semibold text-lg">Student Management System</h1>
+                    <h1 className="text-white font-semibold text-lg">Student Management Center</h1>
                 </div>
                 <div className="flex flex-col items-center p-7">
                     <h1 className="text-xl font-semibold text-[#0B132D] pb-3">Welcome Back!👋</h1>

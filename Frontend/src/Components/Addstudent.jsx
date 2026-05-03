@@ -59,7 +59,7 @@ const Addstudent = () => {
         <div className="min-h-screen flex items-center justify-center bg-[#F5F7FB] px-4">
             <div className="w-full max-w-xl border border-blue-200 rounded-2xl shadow-sm bg-white">
                 <div className="bg-[#02173E] text-white rounded-t-2xl p-4 text-center font-semibold text-lg">
-                    Student Management System
+                    Student Management Center
                 </div>
                 <div className="p-6">
                     <h2 className="text-xl font-semibold text-[#0B132D] mb-5">
