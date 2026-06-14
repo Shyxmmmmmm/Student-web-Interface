@@ -2,7 +2,10 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const app = express()
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"])
 app.use(cors())
+require("dotenv").config()
 app.use(express.json())
 
 
