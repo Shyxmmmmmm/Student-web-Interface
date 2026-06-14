@@ -77,7 +77,7 @@ const Login = () => {
                     <button
                         onClick={funcbtn}
                         disabled={loading}
-                        className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold"
+                        className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white py-3 rounded-md font-semibold"
                     >
                         {loading ? "Signing in..." : "Sign In"}
                     </button>
@@ -86,7 +86,7 @@ const Login = () => {
                         onClick={() => navigate('/signup')}
                         className="text-center text-sm text-blue-600 cursor-pointer hover:underline"
                     >
-                        Create an Account
+                        New User? Create an Account Here
                     </p>
 
                 </div>

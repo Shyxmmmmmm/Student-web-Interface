@@ -104,10 +104,11 @@ return (
         <button
           onClick={funsignup}
           disabled={loading}
-          className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold"
+          className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white py-3 rounded-md font-semibold"
         >
           {loading ? "Please wait..." : "Sign Up"}
         </button>
+        <p className='text-center text-sm cursor-pointer text-blue-600 hover:text-blue-700 hover:underline duration-200'>Already Have An Account?</p>
 
       </div>
     </div>
