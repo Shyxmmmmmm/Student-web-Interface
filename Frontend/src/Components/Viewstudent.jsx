@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
-
+import API_URL from '../../API_URL'
 const Viewstudent = () => {
     const navigate = useNavigate()
 
@@ -11,7 +11,7 @@ const Viewstudent = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get("https://student-web-interface-2.onrender.com/getdata")
+        axios.get(`${API_URL}/getdata`)
             .then((res) => {
                 setlist(res.data)
             })
@@ -25,7 +25,7 @@ const Viewstudent = () => {
         if (!window.confirm("Are you sure you want to delete?")) return
 
         try {
-            await axios.delete(`https://student-web-interface-2.onrender.com/delete/${id}`)
+            await axios.delete(`${API_URL}/delete/${id}`)
             setlist(list.filter((item) => item._id !== id))
         } catch (err) {
             console.log(err)

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
+import API_URL from '../../API_URL'
 const Addstudent = () => {
     const navigate = useNavigate()
     const [ip1, setip1] = useState('')
@@ -21,7 +22,7 @@ const Addstudent = () => {
             }
 
             const res = await axios.post(
-                "https://student-web-interface-2.onrender.com/details",
+                `${API_URL}/details`,
                 {
                     name: ip1,
                     age: ip2,

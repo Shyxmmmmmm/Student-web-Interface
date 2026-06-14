@@ -1,8 +1,7 @@
-
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
-
+import API_URL from '../../API_URL'
 const Signup = () => {
 const navigate = useNavigate()
 
@@ -29,7 +28,7 @@ const funsignup = async () => {
         setLoading(true)
 
         const res = await axios.post(
-            'https://student-web-interface-2.onrender.com/signup', 
+            `${API_URL}/signup`, 
             {
                 username: ip1,
                 password: ip2

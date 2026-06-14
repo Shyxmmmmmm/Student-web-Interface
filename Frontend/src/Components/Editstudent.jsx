@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
-
+import API_URL from '../../API_URL'
 const Editstudent = () => {
 
     const location = useLocation()
@@ -19,7 +19,7 @@ const Editstudent = () => {
 
         try {
 
-            await axios.put(`https://student-web-interface-2.onrender.com/update/${data._id}`, {
+            await axios.put(`${API_URL}/update/${data._id}`, {
                 name,
                 age,
                 course,
