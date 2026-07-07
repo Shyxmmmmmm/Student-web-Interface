@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 const app = express()
 app.use(cors())
 app.use(express.json())
-
+const dns = require("dns");
+require("dotenv").config();
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 let users = []
 
